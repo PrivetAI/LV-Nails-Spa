@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05CFFAA7054DABDB29A2756C /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC5476AE5F23D60F897A61A /* Schedule.swift */; };
+		1C7F9D38E217958E587B8AFC /* LVWebDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACB1D4B409C601D1AC5DC2 /* LVWebDisplay.swift */; };
+		1E80E347815191A88C8D513B /* LVSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C67E04F0BE322FEAA1ABCFA /* LVSplashView.swift */; };
+		38F807DA6601ABEB1C1F8135 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486050EC5DCABB98E3398E11 /* TodayView.swift */; };
+		53B63F312E8EE41DBD883CC0 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3668ADA330E21023762B3EAD /* MenuView.swift */; };
+		5ACE5E5C49C556CD03CC4894 /* AppointmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBBF18D64DAA083A5FD4DD3 /* AppointmentsView.swift */; };
+		5CD316DCA80A2787DE841388 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1659D19457E2FE79544B2 /* Palette.swift */; };
+		6F850EF5E0DD75F5BC1D052B /* LVNailsSpaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EA8467666C0484A38CE492 /* LVNailsSpaApp.swift */; };
+		88AC1D8AABCDF476953CDF35 /* TabShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6134C6CAAF9B2B9F01D8928A /* TabShell.swift */; };
+		A9B1DFFCE5E6D9ACFF0780D2 /* Salon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0B96178924F4B499044EB5 /* Salon.swift */; };
+		DF443E249EDDE2CBA5BE5346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC033D934436BDD2F1078242 /* Assets.xcassets */; };
+		DFADDA0D432B365B9E19A849 /* SalonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E003C935D1B1CC2D0DDF987 /* SalonView.swift */; };
+		FA14580D4EAC2E5A6EAEB559 /* ReserveSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B84BFCD8E5BCF240F9152E /* ReserveSheet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00B84BFCD8E5BCF240F9152E /* ReserveSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReserveSheet.swift; sourceTree = "<group>"; };
+		0C67E04F0BE322FEAA1ABCFA /* LVSplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVSplashView.swift; sourceTree = "<group>"; };
+		0E0B96178924F4B499044EB5 /* Salon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salon.swift; sourceTree = "<group>"; };
+		3668ADA330E21023762B3EAD /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		486050EC5DCABB98E3398E11 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		6134C6CAAF9B2B9F01D8928A /* TabShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShell.swift; sourceTree = "<group>"; };
+		7EACB1D4B409C601D1AC5DC2 /* LVWebDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVWebDisplay.swift; sourceTree = "<group>"; };
+		8E003C935D1B1CC2D0DDF987 /* SalonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonView.swift; sourceTree = "<group>"; };
+		93EA8467666C0484A38CE492 /* LVNailsSpaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LVNailsSpaApp.swift; sourceTree = "<group>"; };
+		B5D1659D19457E2FE79544B2 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		BCBBF18D64DAA083A5FD4DD3 /* AppointmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsView.swift; sourceTree = "<group>"; };
+		D49D581999C0645FDFE81C5F /* LV Nails Spa.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "LV Nails Spa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDC5476AE5F23D60F897A61A /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		FC033D934436BDD2F1078242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01E74564E4BFC024FDE3E71A = {
+			isa = PBXGroup;
+			children = (
+				CBC58239C2A06D4B8CF42A18 /* LV Nails & Spa */,
+				1E30C834B4C8D0C9B44AAB2C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E30C834B4C8D0C9B44AAB2C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D49D581999C0645FDFE81C5F /* LV Nails Spa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBC58239C2A06D4B8CF42A18 /* LV Nails & Spa */ = {
+			isa = PBXGroup;
+			children = (
+				BCBBF18D64DAA083A5FD4DD3 /* AppointmentsView.swift */,
+				FC033D934436BDD2F1078242 /* Assets.xcassets */,
+				93EA8467666C0484A38CE492 /* LVNailsSpaApp.swift */,
+				0C67E04F0BE322FEAA1ABCFA /* LVSplashView.swift */,
+				7EACB1D4B409C601D1AC5DC2 /* LVWebDisplay.swift */,
+				3668ADA330E21023762B3EAD /* MenuView.swift */,
+				B5D1659D19457E2FE79544B2 /* Palette.swift */,
+				00B84BFCD8E5BCF240F9152E /* ReserveSheet.swift */,
+				0E0B96178924F4B499044EB5 /* Salon.swift */,
+				8E003C935D1B1CC2D0DDF987 /* SalonView.swift */,
+				EDC5476AE5F23D60F897A61A /* Schedule.swift */,
+				6134C6CAAF9B2B9F01D8928A /* TabShell.swift */,
+				486050EC5DCABB98E3398E11 /* TodayView.swift */,
+			);
+			path = "LV Nails & Spa";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38A8046FA4993EF52A2E20C2 /* LV Nails Spa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10548F80FF3FCBBE075FA1EE /* Build configuration list for PBXNativeTarget "LV Nails Spa" */;
+			buildPhases = (
+				1E4262784A545A7B793A4450 /* Sources */,
+				59A8989B29EAD49D0CA7BC95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LV Nails Spa";
+			packageProductDependencies = (
+			);
+			productName = "LV Nails Spa";
+			productReference = D49D581999C0645FDFE81C5F /* LV Nails Spa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32BA2DB8B80CE16898B4BDA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					38A8046FA4993EF52A2E20C2 = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 98C0A22A2F7530C50A4B03B4 /* Build configuration list for PBXProject "LV Nails Spa" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 01E74564E4BFC024FDE3E71A;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 1E30C834B4C8D0C9B44AAB2C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38A8046FA4993EF52A2E20C2 /* LV Nails Spa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59A8989B29EAD49D0CA7BC95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF443E249EDDE2CBA5BE5346 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E4262784A545A7B793A4450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ACE5E5C49C556CD03CC4894 /* AppointmentsView.swift in Sources */,
+				6F850EF5E0DD75F5BC1D052B /* LVNailsSpaApp.swift in Sources */,
+				1E80E347815191A88C8D513B /* LVSplashView.swift in Sources */,
+				1C7F9D38E217958E587B8AFC /* LVWebDisplay.swift in Sources */,
+				53B63F312E8EE41DBD883CC0 /* MenuView.swift in Sources */,
+				5CD316DCA80A2787DE841388 /* Palette.swift in Sources */,
+				FA14580D4EAC2E5A6EAEB559 /* ReserveSheet.swift in Sources */,
+				A9B1DFFCE5E6D9ACFF0780D2 /* Salon.swift in Sources */,
+				DFADDA0D432B365B9E19A849 /* SalonView.swift in Sources */,
+				05CFFAA7054DABDB29A2756C /* Schedule.swift in Sources */,
+				88AC1D8AABCDF476953CDF35 /* TabShell.swift in Sources */,
+				38F807DA6601ABEB1C1F8135 /* TodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		27CAA88FA6CE3E7B87E739FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "LV Nails & Spa";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvnailsspa.app;
+				PRODUCT_NAME = "LV Nails Spa";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		539FE79C3127745C58CBF436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		86D2391A543B007C6CE0A494 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "LV Nails & Spa";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvnailsspa.app;
+				PRODUCT_NAME = "LV Nails Spa";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C532A04BCF1DAF801EEDB295 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10548F80FF3FCBBE075FA1EE /* Build configuration list for PBXNativeTarget "LV Nails Spa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27CAA88FA6CE3E7B87E739FF /* Debug */,
+				86D2391A543B007C6CE0A494 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		98C0A22A2F7530C50A4B03B4 /* Build configuration list for PBXProject "LV Nails Spa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				539FE79C3127745C58CBF436 /* Debug */,
+				C532A04BCF1DAF801EEDB295 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32BA2DB8B80CE16898B4BDA6 /* Project object */;
+}
