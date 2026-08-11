@@ -188,7 +188,7 @@ struct ReserveSheet: View {
     }
 
     private func openCount(in part: PartOfDay) -> Int {
-        schedule.chairTimes(on: day, runningFor: runMinutes, part: part).filter { $0.isFree }.count
+        schedule.chairTimes(on: day, runningFor: runMinutes, part: part).filter { $0.isTakeable }.count
     }
 
     /// Opens on a part of the day that actually has something in it, rather than dropping
@@ -215,30 +215,30 @@ struct ReserveSheet: View {
                         VStack(spacing: 2) {
                             Text(slot.label)
                                 .font(Ink.figure(13, .semibold))
-                                .foregroundColor(slot.isFree ? Ink.letter : Ink.letterSoft.opacity(0.6))
-                            Text(slot.isFree ? "\(slot.chairsFree) free" : "full")
+                                .foregroundColor(slot.isTakeable ? Ink.letter : Ink.letterSoft.opacity(0.6))
+                            Text(slot.isTakeable ? "\(slot.chairsFree) free" : (slot.isPast ? "gone" : "full"))
                                 .font(Ink.figure(9))
-                                .foregroundColor(slot.isFree ? Ink.accent : Ink.letterSoft.opacity(0.6))
+                                .foregroundColor(slot.isTakeable ? Ink.accent : Ink.letterSoft.opacity(0.6))
                         }
                         .frame(width: 82, height: 46)
-                        .background(slot.isFree ? Ink.cardLifted : Ink.card)
+                        .background(slot.isTakeable ? Ink.cardLifted : Ink.card)
                         .overlay(
                             RoundedRectangle(cornerRadius: Span.corner)
-                                .stroke(slot.isFree ? Ink.accent.opacity(0.4) : Ink.rule,
+                                .stroke(slot.isTakeable ? Ink.accent.opacity(0.4) : Ink.rule,
                                         lineWidth: Span.rule)
                         )
                         .clipShape(RoundedRectangle(cornerRadius: Span.corner))
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(PlainButtonStyle())
-                    .disabled(!slot.isFree)
+                    .disabled(!slot.isTakeable)
                 }
             }
         }
     }
 
     private func take(_ slot: ChairTime) {
-        guard slot.isFree else { return }
+        guard slot.isTakeable else { return }
         schedule.reserve(treatment,
                          extras: extras.compactMap { Salon.treatment($0) },
                          day: day,

@@ -34,9 +34,34 @@ struct ChairTime: Identifiable, Equatable {
     /// How many of the salon's chairs are still free at this time.
     let chairsFree: Int
 
+    /// A quarter of today that has already gone by. It keeps its place in the grid, so
+    /// the shape of the day still reads, but it cannot be taken.
+    let isPast: Bool
+
     var id: Int { minutes }
     var isFree: Bool { chairsFree > 0 }
+    var isTakeable: Bool { isFree && !isPast }
     var label: String { Salon.clock(minutes) }
+}
+
+/// Date formatting is pinned rather than left to the device. `DateFormatter` otherwise
+/// follows the phone's locale and calendar, which would translate the day strip and — far
+/// worse — change the day key every chair-load hash is built on, reshuffling the whole
+/// fortnight for anyone whose phone is not on English and Gregorian.
+enum Fixed {
+    static let gregorian: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.locale = Locale(identifier: "en_US_POSIX")
+        return calendar
+    }()
+
+    static func formatter(_ format: String, posix: Bool = false) -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: posix ? "en_US_POSIX" : "en_US")
+        formatter.calendar = Fixed.gregorian
+        formatter.dateFormat = format
+        return formatter
+    }
 }
 
 struct Reservation: Identifiable, Codable, Equatable {
@@ -127,10 +152,18 @@ final class Schedule: ObservableObject {
         }
     }
 
+    /// The string every chair-load hash is seeded from, so it has to be stable whatever
+    /// the phone's language and calendar are set to.
+    static let keyFormatter = Fixed.formatter("yyyy-MM-dd", posix: true)
+
     static func dayKey(_ day: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: day)
+        keyFormatter.string(from: day)
+    }
+
+    /// Minutes from midnight, right now. Used to retire the quarters already spent.
+    private static var minutesNow: Int {
+        let parts = Fixed.gregorian.dateComponents([.hour, .minute], from: Date())
+        return (parts.hour ?? 0) * 60 + (parts.minute ?? 0)
     }
 
     /// Every quarter hour the salon is open, with the number of chairs still free. A
@@ -139,6 +172,8 @@ final class Schedule: ObservableObject {
         let weekday = Calendar.current.component(.weekday, from: day)
         let hours = Salon.hours(for: weekday)
         let key = Schedule.dayKey(day)
+        // Only today has a past; every other day in the strip is open end to end.
+        let cutoff = Fixed.gregorian.isDateInToday(day) ? Schedule.minutesNow : -1
 
         var result: [ChairTime] = []
         var start = hours.opensAt
@@ -150,7 +185,7 @@ final class Schedule: ObservableObject {
                 step += 15
             }
             if isHeld(day: day, from: start, to: start + minutes) { free = 0 }
-            result.append(ChairTime(minutes: start, chairsFree: free))
+            result.append(ChairTime(minutes: start, chairsFree: free, isPast: start <= cutoff))
             start += 30
         }
         return result
@@ -162,16 +197,12 @@ final class Schedule: ObservableObject {
 
     /// The soonest chair inside the next fortnight, or nil if the salon is full.
     func soonest(for minutes: Int) -> (day: Date, time: ChairTime)? {
-        let calendar = Calendar.current
         let now = Date()
         for offset in 0..<14 {
-            guard let day = calendar.date(byAdding: .day, value: offset, to: now) else { continue }
-            for time in chairTimes(on: day, runningFor: minutes) where time.isFree {
-                if offset == 0 {
-                    let nowMinutes = calendar.component(.hour, from: now) * 60
-                        + calendar.component(.minute, from: now)
-                    if time.minutes <= nowMinutes { continue }
-                }
+            guard let day = Fixed.gregorian.date(byAdding: .day, value: offset, to: now) else { continue }
+            // `isTakeable` already retires the quarters today has spent, so the search no
+            // longer has to special-case the first day.
+            if let time = chairTimes(on: day, runningFor: minutes).first(where: { $0.isTakeable }) {
                 return (day, time)
             }
         }
@@ -258,22 +289,14 @@ enum DoorState {
     }
 }
 
+/// Built once and pinned to English and Gregorian — this app ships in English only, and a
+/// day strip that changed language with the phone would not match the salon's own sign.
 enum Mark {
-    static func day(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEE d MMM"
-        return formatter.string(from: date)
-    }
+    private static let full = Fixed.formatter("EEE d MMM")
+    private static let short = Fixed.formatter("EEE")
+    private static let figure = Fixed.formatter("d")
 
-    static func weekday(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "EEE"
-        return formatter.string(from: date)
-    }
-
-    static func number(_ date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "d"
-        return formatter.string(from: date)
-    }
+    static func day(_ date: Date) -> String { full.string(from: date) }
+    static func weekday(_ date: Date) -> String { short.string(from: date) }
+    static func number(_ date: Date) -> String { figure.string(from: date) }
 }
